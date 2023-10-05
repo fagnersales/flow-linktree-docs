@@ -11,7 +11,7 @@ const config: DocsThemeConfig = {
   },
   docsRepositoryBase: 'https://github.com/fagnersales/flow-linktree-docs',
   footer: {
-    text: 'Nextra Docs Template',
+    text: 'Linktree Docs',
   },
 }
 
