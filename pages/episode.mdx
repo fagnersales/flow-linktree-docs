@@ -1,0 +1,33 @@
+## Episode
+
+Episodes are any official flow episode that happened after Monark Day.
+
+#### Episode Structure
+
+| FIELD | DESCRIPTION | TYPE |
+|---|---|---|
+| id | uuid | episode id |
+| title | string | episode title |
+| guests | Array\<[Guest](/guest)\> | guests (only included with `?with_guest=true` param) |
+| partners | Array\<[Partner](/partner)\> | partners (only included with `?with_partner=true` param) |
+| youtube_url | string | the episode on youtube |
+| spotify_url | string? | the episode on spotify |
+| deezer_url | string? | the episode on deezer |
+| thumbnail_url | string | the thumbnail used on youtube (it's hosted in our CDN) |
+| createdAt | number | the timestamp when the episode was created |
+
+## Listing all episodes
+**GET** `https://flowtree.link/api/episodes`
+
+* There is no way to retrieve guests and/or partners from this endpoint!
+
+**Returns:** Array\<[Episode](/episode)\>
+
+## Specific episode
+
+**GET**  `https://flowtree.link/api/episodes/272`
+
+**Returns:** Array\<[Episode](/episode)\>
+
+\* Param `with_guests=true` will add a property `guests` of type `Array<Guest>` <br />
+** Param `with_partners=true` will add a property `partners` of type `Array<Partner>`

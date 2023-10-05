@@ -1,0 +1,28 @@
+# Guest
+
+Anyone that is not the default hosts (Igor3k, Gianzão)
+
+### Guest Structure
+
+| FIELD | DESCRIPTION | TYPE |
+|---|---|---|
+| id | uuid | guest id |
+| first_name | string | guest first name |
+| last_name | string | guest last name |
+| display_name | string | guest nickname (defaults to `first_name` + `last_name`) |
+| display_name | string | guest nickname (defaults to `first_name` + `last_name`) |
+| bio | string | guest description usually taken from wikipedia |
+| profile_image_url | string | guest avatar (hosted in our CDN) |
+| socials | Array\<Social\> | all common guests socials |
+| createdAt | number | timestamp when the guest was created |
+
+### Social Structure
+
+| FIELD | DESCRIPTION | TYPE |
+|---|---|---|
+| name | string | name of the social media (instagram, twitter, x, youtube, etc) |
+| url | string | url to the social media |
+| icon_url | string \| null | url to the icon's social media (it's often null because only custom websites will have a icon_url) |
+
+
+
