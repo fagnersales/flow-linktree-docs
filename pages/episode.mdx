@@ -1,3 +1,5 @@
+import { Callout } from 'nextra/components'
+
 ## Episode
 
 Episodes are any official flow episode that happened after Monark Day.
@@ -10,16 +12,18 @@ Episodes are any official flow episode that happened after Monark Day.
 | title | string | episode title |
 | guests | Array\<[Guest](/guest)\> | guests (only included with `?with_guest=true` param) |
 | partners | Array\<[Partner](/partner)\> | partners (only included with `?with_partner=true` param) |
-| youtube_url | string | the episode on youtube |
+| youtube_video_id | string | the episode's video id on youtube |
 | spotify_url | string? | the episode on spotify |
 | deezer_url | string? | the episode on deezer |
-| thumbnail_url | string | the thumbnail used on youtube (it's hosted in our CDN) |
+| thumbnail_url | string | the thumbnail used on youtube (it's hosted in Youtube's CDN) |
 | createdAt | number | the timestamp when the episode was created |
 
 ## Listing all episodes
 **GET** `https://flowtree.link/api/episodes`
 
-* There is no way to retrieve guests and/or partners from this endpoint!
+<Callout type="warning">
+  There is no way to retrieve guests and/or partners from this endpoint!
+</Callout>
 
 **Returns:** Array\<[Episode](/episode)\>
 
@@ -29,5 +33,10 @@ Episodes are any official flow episode that happened after Monark Day.
 
 **Returns:** Array\<[Episode](/episode)\>
 
-\* Param `with_guests=true` will add a property `guests` of type `Array<Guest>` <br />
-** Param `with_partners=true` will add a property `partners` of type `Array<Partner>`
+<Callout>
+  Param `with_guests=true` will add a property `guests` of type `Array<Guest>`
+</Callout>
+
+<Callout>
+  Param `with_partners=true` will add a property `partners` of type `Array<Partner>`
+</Callout>
